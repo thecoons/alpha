@@ -15,8 +15,17 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/patient</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>Calendar</servlet-name>
+		<servlet-class>fr.calendar.alpha.CalendarServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Calendar</servlet-name>
+		<url-pattern>/calendar</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>jsp/index.jsp</welcome-file>
 	</welcome-file-list>
 	<filter>
         <filter-name>ObjectifyFilter</filter-name>

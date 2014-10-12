@@ -33,7 +33,7 @@ public class PatientServlet extends HttpServlet {
 		req.setAttribute("patients", patients);
 		}
 		
-		this.getServletContext().getRequestDispatcher("/newPatient.jsp").forward(req, resp);
+		this.getServletContext().getRequestDispatcher("/jsp/newPatient.jsp").forward(req, resp);
 	}
 	public void doPost (HttpServletRequest req, HttpServletResponse resp)
 		throws IOException,ServletException{
@@ -55,7 +55,7 @@ public class PatientServlet extends HttpServlet {
 		
 		ofy().save().entity(patient).now();
 		
-		resp.sendRedirect("/patient");
+		resp.sendRedirect("/jsp/patient");
 		
 	}
 
