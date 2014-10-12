@@ -64,7 +64,7 @@
 						<tr>
 							<td>${ patient.nom }</td>
 							<td>${ patient.prenom }</td>
-							<td>${ patient.birthday }</td>
+							<td>${ patient.birthDay }</td>
 
 						</tr>
 					</c:forEach>

@@ -29,7 +29,7 @@ public class PatientServlet extends HttpServlet {
 		
 		String search = req.getParameter("search");
 		if (search != null){
-		List<PatientEntity> patients = ofy().load().type(PatientEntity.class).filter("nom >=",search).filter("nom <",search + "\uFFFD").limit(9).list();
+		List<PatientEntity> patients = ofy().load().type(PatientEntity.class).filter("nom >=", search).filter("nom <", search + "\uFFFD").list();
 		req.setAttribute("patients", patients);
 		}
 		
@@ -48,6 +48,7 @@ public class PatientServlet extends HttpServlet {
 			date = dateFormat.parse(req.getParameter("birthday"));
 		} catch (ParseException e) {
 			e.printStackTrace();
+			System.out.println("Erreur Birthday");
 		}
 		
 		PatientEntity patient = new PatientEntity(req.getParameter("nom"), req.getParameter("prenom"), blobKeys.get(0),date);
