@@ -65,6 +65,7 @@
 							<td>${ patient.nom }</td>
 							<td>${ patient.prenom }</td>
 							<td>${ patient.birthDay }</td>
+							<td><a>${ patient.url }</a></td>
 
 						</tr>
 					</c:forEach>
