@@ -5,6 +5,7 @@
 <jsp:include page="meta.jsp" />
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/calendar.css">
+<link rel="stylesheet" href="css/datepicker3.css">
 </head>
 
 <body>
@@ -32,6 +33,7 @@
 						<button class="btn btn-warning" data-calendar-view="week">Week</button>
 						<button class="btn btn-warning" data-calendar-view="day">Day</button>
 					</div>
+					<input data-provide="datepicker">
 				</div>
 			</div>
 		</div>
@@ -39,7 +41,11 @@
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/underscore-min.js"></script>
-	<script type="text/javascript" src="js/calendar.js"></script>
+	<script type="text/javascript" src="js/calendar.js"></script>*
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript">
+	$('.datepicker').datepicker()
+	</script>
 </body>
 </html>
