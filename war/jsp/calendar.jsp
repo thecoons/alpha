@@ -26,14 +26,53 @@
 						<button class="btn btn-primary" data-calendar-nav="next">Next
 							>></button>
 					</div>
-					
+
 					<div class="btn-group">
 						<button class="btn btn-warning" data-calendar-view="year">Year</button>
 						<button class="btn btn-warning active" data-calendar-view="month">Month</button>
 						<button class="btn btn-warning" data-calendar-view="week">Week</button>
 						<button class="btn btn-warning" data-calendar-view="day">Day</button>
 					</div>
-					<input data-provide="datepicker">
+					<form class="form-horizontal" role="form" method="POST" action="/calendar" enctype="multipart/form-data">
+
+						<div class="form-group">
+							<label for="dateTitle" class="col-sm-2 control-label">Titre</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" name="datetitle"placeholder="Titre rdv">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="dateType" class="col-sm-2 control-label">Type
+								Rdv</label>
+							<div class="col-sm-4">
+								<select class="form-control" name="datetype">
+									<option>event-important</option>
+									<option>event-success</option>
+									<option>event-warning</option>
+									<option>event-info</option>
+									<option>event-inverse</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group" >
+							<label for="dateDebut" class="col-sm-2 control-label">Date
+								Start</label>
+							<div class="col-sm-4">
+								<input type="date" class="form-control" name="datestart" id="dateDebut">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="dateEnd" class="col-sm-2 control-label">Date
+								End</label>
+							<div class="col-sm-4">
+								<input type="date" class="form-control" name="dateend" id="dateEnd">
+							</div>
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					<p>
+						${ events }
+					</p>
 				</div>
 			</div>
 		</div>
@@ -41,11 +80,11 @@
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/underscore-min.js"></script>
-	<script type="text/javascript" src="js/calendar.js"></script>*
+	<script type="text/javascript" src="js/calendar.js"></script>
 	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript">
-	$('.datepicker').datepicker()
+		$('.datepicker').datepicker()
 	</script>
 </body>
 </html>
