@@ -10,10 +10,29 @@
 <body>
 
 	<jsp:include page="header.jsp" />
+	<h3></h3>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-8">
 				<div id="calendar"></div>
+			</div>
+			<div class="col-xs-4">
+				<div class="pull-right form-inline">
+					<div class="btn-group">
+						<button class="btn btn-primary" data-calendar-nav="prev"><<
+							Prev</button>
+						<button class="btn btn-default" data-calendar-nav="today">Today</button>
+						<button class="btn btn-primary" data-calendar-nav="next">Next
+							>></button>
+					</div>
+					
+					<div class="btn-group">
+						<button class="btn btn-warning" data-calendar-view="year">Year</button>
+						<button class="btn btn-warning active" data-calendar-view="month">Month</button>
+						<button class="btn btn-warning" data-calendar-view="week">Week</button>
+						<button class="btn btn-warning" data-calendar-view="day">Day</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -21,13 +40,6 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/underscore-min.js"></script>
 	<script type="text/javascript" src="js/calendar.js"></script>
-	<script type="text/javascript">
-        var calendar = $("#calendar").calendar(
-            {
-                tmpl_path: "/tmpls/",
-                events_source: function () { return []; }
-            });         
-    </script>
-
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
