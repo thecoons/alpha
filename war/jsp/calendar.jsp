@@ -33,7 +33,7 @@
 						<button class="btn btn-warning" data-calendar-view="week">Week</button>
 						<button class="btn btn-warning" data-calendar-view="day">Day</button>
 					</div>
-					<form class="form-horizontal" role="form" method="POST" action="/calendar" enctype="multipart/form-data">
+					<form class="form-horizontal" role="form" method="post" action="/calendar">
 
 						<div class="form-group">
 							<label for="dateTitle" class="col-sm-2 control-label">Titre</label>

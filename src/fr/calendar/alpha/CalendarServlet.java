@@ -38,6 +38,7 @@ public class CalendarServlet extends HttpServlet {
 		
 		Date dateStart = null;
 		Date dateEnd = null;
+		
 		try{
 			dateStart = dateStartFormat.parse(req.getParameter("datestart"));
 			dateEnd = dateEndFormat.parse(req.getParameter("dateend"));
@@ -49,7 +50,7 @@ public class CalendarServlet extends HttpServlet {
 		EventEntity event = new EventEntity(req.getParameter("datetitre"), dateStart, dateEnd, req.getParameter("type"));
 		ofy().save().entity(event).now();
 		
-		resp.sendRedirect("/jsp/calendar.jsp");
+		resp.sendRedirect("/calendar");
 	}
 
 }
