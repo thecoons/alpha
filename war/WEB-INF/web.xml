@@ -23,6 +23,14 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>Calendar</servlet-name>
 		<url-pattern>/calendar</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>EventJson</servlet-name>
+		<servlet-class>fr.calendar.alpha.EventJsonServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EventJson</servlet-name>
+		<url-pattern>/eventJson</url-pattern>
+	</servlet-mapping>
 	
 	<welcome-file-list>
 		<welcome-file>jsp/index.jsp</welcome-file>

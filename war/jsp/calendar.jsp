@@ -33,12 +33,14 @@
 						<button class="btn btn-warning" data-calendar-view="week">Week</button>
 						<button class="btn btn-warning" data-calendar-view="day">Day</button>
 					</div>
-					<form class="form-horizontal" role="form" method="post" action="/calendar">
+					<form class="form-horizontal" role="form" method="post"
+						action="/calendar">
 
 						<div class="form-group">
 							<label for="dateTitle" class="col-sm-2 control-label">Titre</label>
 							<div class="col-sm-4">
-								<input type="text" class="form-control" name="datetitle"placeholder="Titre rdv">
+								<input type="text" class="form-control" name="datetitle"
+									placeholder="Titre rdv">
 							</div>
 						</div>
 						<div class="form-group">
@@ -54,25 +56,24 @@
 								</select>
 							</div>
 						</div>
-						<div class="form-group" >
+						<div class="form-group">
 							<label for="dateDebut" class="col-sm-2 control-label">Date
 								Start</label>
 							<div class="col-sm-4">
-								<input type="date" class="form-control" name="datestart" id="dateDebut">
+								<input type="date" class="form-control" name="datestart"
+									id="dateDebut">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="dateEnd" class="col-sm-2 control-label">Date
 								End</label>
 							<div class="col-sm-4">
-								<input type="date" class="form-control" name="dateend" id="dateEnd">
+								<input type="date" class="form-control" name="dateend"
+									id="dateEnd">
 							</div>
 						</div>
 						<button type="submit" class="btn btn-default">Submit</button>
 					</form>
-					<p>
-						${ events }
-					</p>
 				</div>
 			</div>
 		</div>
@@ -81,10 +82,10 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/underscore-min.js"></script>
 	<script type="text/javascript" src="js/calendar.js"></script>
-	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript">
-		$('.datepicker').datepicker()
+	var calendar = $('#calendar').calendar({events_source: '/eventJson'});
 	</script>
+
 </body>
 </html>
