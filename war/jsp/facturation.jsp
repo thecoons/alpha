@@ -14,14 +14,14 @@
 		<div class="row">
 			<div class="col-xs-8">
 				<form class="form-inline" role="form" action="/facturation"
-					method="get" entype="multipart/form-data">
+					method="get">
 					<div class="form-group">
 						<input type="text" class="form-control" name="search">
 					</div>
 					<div class="form-group">
-						<select class="form-control" name="search">
-							<option value="idpatient">PatientId</option>
-							<option value="type">Type prestation</option>
+						<select class="form-control" name="searchType">
+							<option value="patientId">PatientId</option>
+							<option value="typePrestation">Type prestation</option>
 							<option value="montant">Montant</option>
 							<option value="date">Date</option>
 						</select>
@@ -30,7 +30,7 @@
 				<h2>Liste recherche facture</h2>
 				<table class="table table-striped">
 
-					<c:forEach var="facture" items="${ factures }">
+					<c:forEach var="facture" items="${ facts }">
 						<tr>
 							<td>${ facture.patientId }</td>
 							<td>${ facture.date }</td>
@@ -44,7 +44,7 @@
 			<div class="col-xs-4">
 				<form role="form"
 					action="/facturation"
-					method="post" enctype="multipart/form-data">
+					method="post">
 					<div class="form-group">
 						<label for="idPatient">Id Patient : </label> <input type="text"
 							name="idPatient" class="form-control" id="idpatient">
@@ -57,8 +57,10 @@
 					</div>
 					<div class="form-group">
 						<label for="date">Date (
-							dd/mm/yyyy ) :</label><input type="text" name="date"
-							class="form-control" id="date">
+							dd/mm/yyyy ) :</label>
+							<div class="col-sm-4">
+							<input type="date"  name="date" class="form-control" id="date">
+							</div>
 					</div>
 					<div class="form-group">
 						<label for="montant">Montant :</label> <input type="text"

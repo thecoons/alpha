@@ -8,13 +8,13 @@ import com.googlecode.objectify.annotation.*;
 @Cache
 public class FacturationEntity {
 	@Id Long id;
-	@Index Long patientId;
-	@Index Long montant;
+	@Index String patientId;
+	@Index String montant;
 	@Index String typePrestation;
 	@Index Date date;
 	
 	private FacturationEntity(){};
-	public FacturationEntity(Long patientId,Long montant,String typePrestation,Date date){
+	public FacturationEntity(String patientId,String montant,String typePrestation,Date date){
 		this.patientId = patientId;
 		this.montant = montant;
 		this.typePrestation = typePrestation;
@@ -23,10 +23,10 @@ public class FacturationEntity {
 	public Long getId() {
 		return id;
 	}
-	public Long getPatientId() {
+	public String getPatientId() {
 		return patientId;
 	}
-	public Long getMontant() {
+	public String getMontant() {
 		return montant;
 	}
 	public String getTypePrestation() {
