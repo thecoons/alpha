@@ -39,7 +39,7 @@
 							</div>
 							<div class="caption">
 								<p>
-									<b>Gérer tous vos dossiers patients.</b>
+									<b>Gérer tous vos dossiers patients. ET ce petit troll</b>
 								</p>
 								<p>
 									<button type="button" class="btn btn-default btn-lg">
